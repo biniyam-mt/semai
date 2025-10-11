@@ -85,10 +85,12 @@
 
   function captureLastEmail() {
     const messages = document.querySelectorAll(".adn");
+    console.log("Captured messages:", messages);
+    if (messages.length === 0) return "";
+    // if (messages.length === 1) return messages[0].innerText || "";
     const lastMessage = messages[messages.length - 1];
-
     const expandButton = lastMessage.querySelector(".ajR .ajT");
-    let text = "";
+    let text = messages[0].innerText || "";
     if (expandButton) {
       expandButton.click();
       text = lastMessage ? lastMessage.innerText : "";

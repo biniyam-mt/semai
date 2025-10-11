@@ -4,14 +4,14 @@
     <title>My Test Extension</title>
     <style>
       body {
-        width: 260px;
         font-family: Arial, sans-serif;
         padding: 10px;
       }
       button {
-        width: 100%;
+        width: 80px;
         padding: 6px;
         margin-top: 6px;
+        cursor: pointer;
       }
       input[type="password"] {
         width: 100%;
@@ -24,11 +24,19 @@
     </style>
   </head>
   <body>
-    <h3>Settings</h3>
-    <label for="apiKey">AI API Key</label>
-    <input id="apiKey" type="password" placeholder="sk-..." />
-    <button id="saveKey">Save API Key</button>
-    <button id="clearKey">Clear API Key</button>
+    <div style="display: flex; flex-direction: row; gap: 5px; align-items: center; justify-content: space-around; margin-bottom: 5px;">
+      <img
+        src="logo_hor.png"
+        alt="Extension Icon"
+        style="height: 14px"
+      />
+      <div>Semai 1.0</div>
+    </div>
+    <div style="display: flex; flex-direction: row; font-weight: bold; font-size: 16px; gap: 10px;">
+      <button id="reportBugBtn">Report a Bug</button>
+      <button id="buyCoffeeBtn">Buy me a coffee</button>
+    </div>
+  </div>
     <script src="popup.js"></script>
   </body>
 </html>
